@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="d1" class="com.Director">
+    <property  name="name" value="Christopher Nolan"/>
+    <property name="movies">
+        <set>
+            <ref bean="m1"/>
+            <ref bean="m2"/>
+        </set>
+    </property>
+</bean>
+    <bean id="m1" class="com.Movie">
+        <property name="id" value="101"/>
+        <property name="name" value="Inception"/>
+    </bean>
+    <bean id="m2" class="com.Movie">
+        <property name="id" value="102"/>
+        <property name="name" value="Tenet"/>
+    </bean>
+
+
+</beans>
